@@ -1,0 +1,15 @@
+---
+description: TriFlex mechanical design and validation rules
+alwaysApply: true
+---
+
+Read AGENTS.md before modifying TriFlex geometry, documentation, or release files.
+
+V29 is the stable physically tested baseline. Never overwrite or silently modify it.
+V30 is experimental and must not be described as physically validated until a test is recorded.
+
+For mechanical experiments, change one variable at a time whenever practical. Preserve dimensions and load-path features not explicitly named by the experiment.
+
+Do not fill the center-open underside, add a flexible neck, or apply generic whole-mesh smoothing unless the experiment explicitly calls for that change.
+
+Before publishing an STL revision, verify dimensions, mesh integrity/watertightness, and document whether the result is generated-only or physically tested.
