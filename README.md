@@ -1,8 +1,18 @@
 # TriFlex
 
+**Triple-Helix Mesh Trigger Cone**
+
+![TriFlex V29 render](assets/triflex-v29-render.png)
+
 **TriFlex — A 3D-printable triple-helix piezo trigger cone for electronic mesh drum pads.**
 
 TriFlex is a mechanical trigger-cone project for electronic drums using mesh heads and piezo sensors. Instead of a conventional solid foam cone, it uses three TPU helical spring arms and stabilizing membranes to tune compliance, lateral stability, sensitivity, and hotspot behavior.
+
+## Mechanical concept
+
+The helix arms provide vertical compliance. The membranes add lateral stability and tune the spring response without turning the geometry into a closed shell.
+
+The piezo is approximately 27-28 mm in diameter. A small centered adhesive pad supports its metal side against the drum plate, and TriFlex contacts the ceramic side. The piezo is therefore supported near its center from below and loaded through an annular/peripheral region from above. The center-open underside is intentional: it permits piezo flexure and is believed to contribute strongly to sensitivity. This is a mechanical hypothesis consistent with observed behavior; it has not yet been instrumented. See [docs/DESIGN.md](docs/DESIGN.md).
 
 ## Project status
 
@@ -22,6 +32,31 @@ V29 has been physically printed and tested and produced excellent sensitivity wi
 **Current experiment: V30**
 
 V30 preserves the V29 target geometry and reduces only the helix-arm target diameter from Ø3.3 mm to Ø3.1 mm. It is generated but has not yet been physically validated.
+
+## Model files
+
+| File | Status |
+|---|---|
+| [`models/stable/triflex-v29.stl`](models/stable/triflex-v29.stl) | Stable — physically printed and tested |
+| [`models/experimental/triflex-v30-experimental.stl`](models/experimental/triflex-v30-experimental.stl) | Experimental — generated, not physically validated |
+
+The STL files contain the 32 mm TPU body only. The 3 mm top allowance is reserved for a separate felt/foam/compliant contact and is not modeled in the STL.
+
+Mesh check (both files): watertight, consistent winding, bounding box 38 × 38 × 32 mm, top contact Ø9.0 mm.
+
+**V29 is preserved byte-for-byte as the canonical stable artifact** (SHA-256 `6ba6824379025cc35e50dc8483c4deec778fa85bb63e8777b1d8f94238a3a9a2`). It contains 5 closed shells/components that are not boolean-unioned. This is intentional: this exact STL was sliced in Cura and physically validated. "Non-unioned" is not permission to repair, union, remesh, or normalize the stable file. A unioned or cleaned-up variant must be a new experimental revision and must be physically retested before it can be called stable.
+
+## Printing and material summary
+
+- Material: RhinoLab TPU 95A HS
+- Printer: Creality Ender-3 S1, Sprite direct drive, 0.4 mm nozzle
+- Slicer: Cura 5.2.1
+- Layer height 0.20 mm · nozzle 220°C (first layer 225°C) · bed 35°C (first layer 40°C)
+- Print speed 28 mm/s · outer wall 22 mm/s · retraction 0.5 mm at 15 mm/s · fan 20-35% after first layer
+- Build plate adhesion: none — the validated V29 print used no brim
+- Dry TPU before critical prints; the reference spool was dried at 70°C for approximately 8 hours.
+
+Reference Cura profile: [`cura/TriFlex_Ender3S1_TPU95A_V29_Validated.curaprofile`](cura/TriFlex_Ender3S1_TPU95A_V29_Validated.curaprofile), extracted from the validated V29 G-code. [docs/PRINTING.md](docs/PRINTING.md) is the authoritative printing reference.
 
 ## Documentation
 

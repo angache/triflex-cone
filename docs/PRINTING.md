@@ -8,6 +8,8 @@
 - Slicer reference: Cura 5.2.1
 
 ## Current reference profile
+Reference Cura profile: `cura/TriFlex_Ender3S1_TPU95A_V29_Validated.curaprofile`.
+
 | Setting | Value |
 |---|---:|
 | Layer height | 0.20 mm |
@@ -26,9 +28,28 @@
 | Retraction speed | 15 mm/s |
 | Fan | 20-35% after first layer |
 | Minimum layer time | 10 s |
-| Brim | 6 mm reference; reduce/disable if unnecessary |
+| Build plate adhesion | None (`adhesion_type = none`) — no brim |
+| Supports | Disabled |
 
 Retraction prime speed: 15 mm/s. Z-hop is off. Combing is set to infill and avoid-other-parts is enabled.
+
+## Validated V29 print
+The physically validated V29 test print was sliced in Cura 5.2.1 (machine definition `creality_ender3s1`) with:
+- `adhesion_type = none`
+- therefore **no brim** was used.
+
+The profile also stores `brim_width = 6`. That value is inactive when `adhesion_type = none` and is not part of the validated V29 setup.
+
+G-code summary of the validated print: max Z 32 mm, estimated print time 3934 s (~66 min), 1.40 m of filament.
+
+The validated G-code is archived outside this repository (SHA-256 `76a47994a570abb57471f831934960b78eb8f7002983c95e7bb85267b698f32d`).
+
+The reference profile `cura/TriFlex_Ender3S1_TPU95A_V29_Validated.curaprofile` was extracted from the settings embedded in that G-code. Only the profile display name was changed; all slicing values are identical to the validated print.
+
+`cura/legacy/Ender3_S1_RhinoLab_TPU95A_HS_V28_SAFE_V24.curaprofile` is the original hand-kept profile, preserved as a source artifact. It is **not** the V29 reference: it sets `adhesion_type = brim` and targets `creality_base`, so importing it as-is would print a brim.
+
+## Brim (optional troubleshooting aid)
+A 6 mm brim may be enabled if first-layer adhesion fails or corners lift. It is an adhesion aid only, not the validated V29 default. A print made with a brim deviates from the validated setup and should be noted as such in docs/TESTING.md.
 
 ## TPU moisture
 TPU moisture strongly affects stringing. The current material produced nearly string-free tower tests after drying at 70°C for approximately 8 hours.

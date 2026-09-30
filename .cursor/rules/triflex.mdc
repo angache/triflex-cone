@@ -13,3 +13,5 @@ For mechanical experiments, change one variable at a time whenever practical. Pr
 Do not fill the center-open underside, add a flexible neck, or apply generic whole-mesh smoothing unless the experiment explicitly calls for that change.
 
 Before publishing an STL revision, verify dimensions, mesh integrity/watertightness, and document whether the result is generated-only or physically tested.
+
+Reproducibility of a physically validated artifact takes priority over cosmetic CAD/mesh cleanup. Never repair, boolean-union, remesh, or re-export models/stable/triflex-v29.stl; it must stay byte-identical. A cleaned-up variant is a new experimental revision that must be physically retested.

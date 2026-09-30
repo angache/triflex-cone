@@ -30,6 +30,12 @@ Geometry:
 - center-open underside
 - 3 mm top allowance
 
+Print record:
+- STL: `models/stable/triflex-v29.stl` (5 closed, non-unioned shells)
+- Sliced in Cura 5.2.1 with `cura/TriFlex_Ender3S1_TPU95A_V29_Validated.curaprofile` settings
+- Build plate adhesion: none (no brim)
+- G-code archived outside the repository (SHA-256 `76a47994a570abb57471f831934960b78eb8f7002983c95e7bb85267b698f32d`)
+
 Observed:
 - Excellent overall response.
 - Hotspot substantially lower than the previous configuration.

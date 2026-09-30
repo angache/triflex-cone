@@ -31,6 +31,11 @@ V30 is experimental and unvalidated:
 8. Never describe an unprinted model as physically validated.
 9. Record each physical test in docs/TESTING.md.
 10. Do not use Roland or another manufacturer's trademark as the TriFlex product name.
+11. Reproducibility of a physically validated artifact takes priority over cosmetic CAD/mesh cleanup. Do not repair, boolean-union, remesh, re-export, or normalize a stable file. Any cleaned-up variant is a new experimental revision with its own identifier and must be physically retested before it can be called stable.
+
+## Canonical V29 artifacts
+- STL: `models/stable/triflex-v29.stl`, preserved byte-for-byte (SHA-256 `6ba6824379025cc35e50dc8483c4deec778fa85bb63e8777b1d8f94238a3a9a2`). It contains 5 closed, non-unioned shells; this is intentional because this exact file was physically validated.
+- Cura profile: `cura/TriFlex_Ender3S1_TPU95A_V29_Validated.curaprofile`, extracted from the validated G-code (`adhesion_type = none`, no brim).
 
 ## Piezo architecture
 The piezo is approximately 27-28 mm diameter. A small centered adhesive pad supports the metal side against the drum plate. TriFlex contacts the ceramic side. The current annular/peripheral loading and open center permit piezo flexure and are considered part of the sensitivity mechanism.
