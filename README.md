@@ -37,7 +37,11 @@ V30 preserves the V29 target geometry and reduces only the helix-arm target diam
 
 [View the complete V30 physical photo log](docs/V30-PHOTO-LOG.md).
 
-**Video:** [Watch the V30 test on PD-128 BC, DIY pad, and KD-85 — SSD5 + raw acoustic audio](https://www.youtube.com/watch?v=LNGkQPw1kC0).
+### V30 physical test video
+
+[![Watch the TriFlex V30 physical test — PD-128 BC, DIY pad, and KD-85](assets/v30/triflex-v30-test-video-thumbnail.jpg)](https://www.youtube.com/watch?v=LNGkQPw1kC0)
+
+Click the image to watch the PD-128 BC, DIY pad, and KD-85 test with SSD5 and raw acoustic audio.
 
 ## Model files
 
