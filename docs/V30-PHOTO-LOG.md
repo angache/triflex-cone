@@ -50,6 +50,12 @@ The damaged original cone removed from the PD-128 BC and a visual comparison bet
 
 ![Used and unused original cones](../assets/v30/original-cone-used-vs-unused.jpg)
 
+## Physical test video
+
+[Watch the V30 test on PD-128 BC, DIY pad, and KD-85 — SSD5 + raw acoustic audio](https://www.youtube.com/watch?v=LNGkQPw1kC0).
+
+The first half uses Steven Slate Drums 5 triggered through TD-9 MIDI. The second half repeats the same performance with the raw physical pad sound recorded by the camera microphone.
+
 ## Publication note
 
 The published JPEG files were re-encoded without source EXIF metadata. The original photographs are retained locally outside version control.

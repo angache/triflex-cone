@@ -80,5 +80,20 @@ Status:
 
 Photographs: [V30 physical photo log](V30-PHOTO-LOG.md).
 
+### Video demonstration
+
+[Watch the V30 test on YouTube](https://www.youtube.com/watch?v=LNGkQPw1kC0).
+
+The same performance is shown twice:
+- 00:00 — Steven Slate Drums 5 (SSD5), triggered through TD-9 MIDI
+- 00:58 — raw physical pad sound recorded by the camera microphone
+
+Performance order:
+1. 12-inch PD-128 BC
+2. Custom DIY mesh pad
+3. KD-85 kick pad
+
+The original combined video is archived outside version control (SHA-256 `c93ed8d2d40ef7bc48ab52c7d52ae94c099c6ef5cd59a30ca403bda171156ca6`).
+
 ## Planned durability work
 Before a public production release, test repeatability across multiple prints and conduct extended strike testing. Candidate milestones include 10,000 and 20,000 hits, followed by inspection for membrane-root cracking, helix fatigue, permanent set, top deformation, and response drift.

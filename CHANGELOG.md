@@ -13,6 +13,7 @@
 - `cura/legacy/Ender3_S1_RhinoLab_TPU95A_HS_V28_SAFE_V24.curaprofile` — original profile kept as a source artifact (not the V29 reference).
 - V30 physical photo set covering PD-128 BC, KD-85, and DIY-pad installations, the felt interface, and original-cone comparisons.
 - `docs/V30-PHOTO-LOG.md` — captions and context for the physical photo set.
+- Public V30 test video demonstrating PD-128 BC, DIY pad, and KD-85 with SSD5 and raw acoustic audio.
 
 ### Changed
 - docs/PRINTING.md: validated V29 print used `adhesion_type = none` (no brim); 6 mm brim is documented only as an optional adhesion aid.

@@ -242,6 +242,8 @@ Module trigger settings and test duration were not recorded. Controlled V29/V30 
 
 Additional physical installations in a KD-85 kick pad and a custom DIY pad are documented photographically without separate performance claims. See the [complete V30 physical photo log](V30-PHOTO-LOG.md).
 
+A combined [V30 test video](https://www.youtube.com/watch?v=LNGkQPw1kC0) demonstrates the PD-128 BC, DIY pad, and KD-85 in sequence. The same performance is presented first through Steven Slate Drums 5 via TD-9 MIDI and then with the raw physical pad sound.
+
 ## 11. Material development
 
 The current reference material is RhinoLab TPU 95A HS.
