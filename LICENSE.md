@@ -1,42 +1,47 @@
-# TriFlex Personal & Non-Commercial License v1.0
+# Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
 
-Copyright (c) 2026 TriFlex contributors / project owner. All rights reserved except as expressly granted below.
+Copyright © 2026 Ali Tuna.
 
-## 1. Permission
-Subject to this License, you may download, copy, print, study, and modify the TriFlex design files and documentation for your own personal, educational, evaluation, research, or hobby use, provided that the use is non-commercial.
+Except where otherwise noted, the TriFlex design files, documentation, images, and other original repository materials are licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)**.
 
-You may share unmodified or modified copies for non-commercial purposes only if you:
-- retain this License and all copyright/notices;
-- clearly identify modified versions as modified; and
-- provide attribution to the TriFlex project.
+Official legal code:
+https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
 
-## 2. Commercial use is not granted
-Without a separate written commercial license from the rights holder, you may not:
-- sell, rent, license, or otherwise commercially distribute TriFlex design files;
-- sell or commercially distribute physical objects manufactured from the files;
-- sell or commercially distribute modified or derivative versions;
-- include TriFlex or a derivative in a paid product, electronic-drum trigger, conversion kit, sensor kit, service, or other commercial offering;
-- manufacture TriFlex parts for third parties for compensation; or
-- sublicense the design under terms that permit commercial use.
+Human-readable summary:
+https://creativecommons.org/licenses/by-nc-sa/4.0/
 
-Commercial use includes activity primarily intended for commercial advantage or monetary compensation.
+## You are free to
 
-## 3. Commercial licensing
-Commercial rights are reserved. A separate written commercial license is required for commercial manufacture, distribution, integration, or sale.
+- **Share** — copy and redistribute the material in any medium or format.
+- **Adapt** — remix, transform, and build upon the material.
 
-## 4. Termination and enforcement
-Any rights granted by this License terminate automatically upon material breach. Unauthorized commercial use is outside the scope of this License.
+These permissions apply only for non-commercial purposes and are irrevocable provided the license terms are followed.
 
-The rights holder reserves all remedies available under applicable law, including injunctive relief and recovery of damages where available. This License does not state a fixed contractual penalty or liquidated-damages amount.
+## Under the following terms
 
-## 5. No trademark license
-This License does not grant rights to use the TriFlex name, logo, or other project branding as a trademark or to imply endorsement.
+- **Attribution** — Give appropriate credit to Ali Tuna and the TriFlex project, provide a link to this license, and indicate whether changes were made.
+- **NonCommercial** — Do not use the material for commercial purposes.
+- **ShareAlike** — If you remix, transform, or build upon the material, distribute your contributions under CC BY-NC-SA 4.0 or a compatible license.
+- **No additional restrictions** — Do not apply legal terms or technological measures that legally restrict others from exercising the rights granted by the license.
 
-## 6. Disclaimer
-THE DESIGN, FILES, DOCUMENTATION, AND ANY PHYSICAL OBJECTS PRODUCED FROM THEM ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, PERFORMANCE, OR DURABILITY. TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE RIGHTS HOLDER SHALL NOT BE LIABLE FOR CLAIMS, DAMAGES, OR OTHER LIABILITY ARISING FROM THEIR USE.
+Suggested attribution:
 
-## 7. Scope
-This is a custom source-available, non-commercial license. It is not an OSI-approved open-source license. No rights are granted except those expressly stated here.
+> TriFlex by Ali Tuna — https://github.com/angache/triflex-cone — licensed under CC BY-NC-SA 4.0. Changes, if any, must be identified.
 
----
-This license is a project licensing statement, not jurisdiction-specific legal advice. If enforcement or commercial licensing is important, obtain review from qualified counsel before public release.
+## Commercial use
+
+CC BY-NC-SA 4.0 does not grant commercial rights. Commercial manufacture, sale, paid distribution, inclusion in a paid product or kit, or other commercial exploitation requires separate written permission from Ali Tuna. See [COMMERCIAL-LICENSE.md](COMMERCIAL-LICENSE.md).
+
+The rights holder may offer the same material under separate commercial terms without affecting permissions already granted under CC BY-NC-SA 4.0.
+
+## Patent and trademark notice
+
+CC BY-NC-SA 4.0 does not license patent or trademark rights. The TriFlex name, logo, and project branding may not be used to imply affiliation, sponsorship, or endorsement.
+
+Third-party names and trademarks appearing descriptively in compatibility notes, photographs, or test records remain the property of their respective owners and are not licensed by this repository.
+
+## Disclaimer
+
+The licensed material is provided **as is** and **as available**, without warranties. The complete warranty disclaimer and limitation of liability are contained in the official CC BY-NC-SA 4.0 legal code linked above.
+
+This file summarizes how CC BY-NC-SA 4.0 is applied to TriFlex. If this summary conflicts with the official legal code, the official legal code controls.

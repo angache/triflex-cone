@@ -78,11 +78,13 @@ TriFlex revisions should normally change one mechanical variable at a time. Gene
 
 ## License
 
-TriFlex is **source-available for personal and non-commercial use**. Commercial use is not granted by the repository license.
+TriFlex is licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)**.
 
-Read [LICENSE.md](LICENSE.md) before downloading, modifying, printing, or redistributing the project. Commercial manufacture, sale, inclusion in paid kits/products, or other commercial exploitation requires a separate written license; see [COMMERCIAL-LICENSE.md](COMMERCIAL-LICENSE.md).
+You may share and adapt the project for non-commercial purposes with attribution. Modified versions must be identified and shared under the same or a compatible license.
 
-This project is not described as OSI open source because commercial use is restricted.
+Read [LICENSE.md](LICENSE.md) before downloading, modifying, printing, or redistributing the project. Commercial manufacture, sale, inclusion in paid kits/products, or other commercial exploitation requires separate written permission from Ali Tuna; see [COMMERCIAL-LICENSE.md](COMMERCIAL-LICENSE.md).
+
+Because commercial use is restricted, this project is not described as OSI open source.
 
 ## Independence / trademarks
 

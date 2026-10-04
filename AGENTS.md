@@ -47,6 +47,13 @@ Current development material: RhinoLab TPU 95A HS.
 Reference printer: Ender-3 S1, direct drive, 0.4 mm nozzle.
 See docs/PRINTING.md for the current profile.
 
+## Licensing reference
+- Copyright holder: Ali Tuna.
+- Repository materials are licensed under CC BY-NC-SA 4.0.
+- Non-commercial sharing and adaptation are allowed with attribution and ShareAlike.
+- Commercial use requires separate written permission.
+- Do not replace or broaden the license without explicit instruction from the rights holder.
+
 ## Repository status terminology
 - Stable: selected reference revision that has completed the required physical test scope and is preserved as a control.
 - Physically tested experimental: printed and functionally tested, but still awaiting required comparison, repeatability, or durability evidence.
