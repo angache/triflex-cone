@@ -16,9 +16,11 @@ The physically validated reference is V29:
 
 V29 produced excellent sensitivity and substantially reduced hotspot compared with earlier prototypes.
 
-V30 is experimental and unvalidated:
+V30 is a physically tested experimental candidate:
 - Same baseline as V29
 - Only intended mechanical change: helix arm diameter 3.3 -> 3.1 mm
+- Initial physical test reported excellent sensitivity and ghost-note response, substantially reduced hotspot, and good print quality
+- Repeatability, controlled A/B comparison, and durability testing remain outstanding
 
 ## Non-negotiable development rules
 1. Change one mechanical variable per experimental revision whenever practical.
@@ -46,6 +48,7 @@ Reference printer: Ender-3 S1, direct drive, 0.4 mm nozzle.
 See docs/PRINTING.md for the current profile.
 
 ## Repository status terminology
-- Stable: physically printed and tested with successful results.
-- Experimental: generated but not yet physically validated.
+- Stable: selected reference revision that has completed the required physical test scope and is preserved as a control.
+- Physically tested experimental: printed and functionally tested, but still awaiting required comparison, repeatability, or durability evidence.
+- Generated experimental: generated but not yet physically tested.
 - Deprecated: rejected or superseded geometry.

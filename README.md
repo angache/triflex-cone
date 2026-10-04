@@ -31,14 +31,18 @@ V29 has been physically printed and tested and produced excellent sensitivity wi
 
 **Current experiment: V30**
 
-V30 preserves the V29 target geometry and reduces only the helix-arm target diameter from Ø3.3 mm to Ø3.1 mm. It is generated but has not yet been physically validated.
+V30 preserves the V29 target geometry and reduces only the helix-arm target diameter from Ø3.3 mm to Ø3.1 mm. It has been physically printed and completed an initial successful test in a 12-inch PD-128 BC with an original two-ply mesh head and a TD-9 module. Excellent sensitivity and ghost-note response, substantially reduced hotspot, and good print quality were observed. V30 remains experimental pending repeatability and durability work; V29 remains the stable control.
+
+![Physically printed V30 installed in a PD-128 BC](assets/v30/v30-pd-128bc-detail.jpg)
+
+[View the complete V30 physical photo log](docs/V30-PHOTO-LOG.md).
 
 ## Model files
 
 | File | Status |
 |---|---|
 | [`models/stable/triflex-v29.stl`](models/stable/triflex-v29.stl) | Stable — physically printed and tested |
-| [`models/experimental/triflex-v30-experimental.stl`](models/experimental/triflex-v30-experimental.stl) | Experimental — generated, not physically validated |
+| [`models/experimental/triflex-v30-experimental.stl`](models/experimental/triflex-v30-experimental.stl) | Physically tested experimental candidate — repeatability and durability pending |
 
 The STL files contain the 32 mm TPU body only. The 3 mm top allowance is reserved for a separate felt/foam/compliant contact and is not modeled in the STL.
 
@@ -61,6 +65,7 @@ Reference Cura profile: [`cura/TriFlex_Ender3S1_TPU95A_V29_Validated.curaprofile
 ## Documentation
 
 - [Development history — prototype evolution through V30](docs/DEVELOPMENT-HISTORY.md)
+- [V30 physical photo log](docs/V30-PHOTO-LOG.md)
 - [Design and geometry](docs/DESIGN.md)
 - [Printing guide](docs/PRINTING.md)
 - [Physical testing log](docs/TESTING.md)

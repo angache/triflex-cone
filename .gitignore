@@ -10,3 +10,5 @@ Thumbs.db
 *.tmp
 *.bak
 *~
+
+/assets/v30-originals/

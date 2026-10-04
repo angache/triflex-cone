@@ -44,25 +44,41 @@ Observed:
 Important:
 Several mechanical variables differ from V26, so the hotspot reduction cannot yet be assigned to one variable.
 
-## V30 — experimental / awaiting physical test
-Intended geometry:
+## V30 — physically tested experimental candidate
+Geometry:
 - Same as V29
 - helix Ø3.1 instead of Ø3.3
 - membrane remains 1.30 mm
 
 Hypothesis:
-Reducing arm diameter should soften the vertical spring response while preserving membrane-controlled lateral stability. A simple beam-style d^4 comparison suggests 3.1 mm arms have roughly 78% of the bending stiffness of 3.3 mm arms, but the actual TriFlex geometry is not a simple beam and physical testing is required.
+Reducing arm diameter should soften the vertical spring response while preserving membrane-controlled lateral stability. A simple beam-style d^4 comparison suggests 3.1 mm arms have roughly 78% of the bending stiffness of 3.3 mm arms, but the actual TriFlex geometry is not a simple beam. This remains a design-direction estimate, not a measured complete-cone stiffness result.
 
-### V30 test fields
-- Printer/material:
-- Pad diameter:
-- Module:
-- Sensitivity:
-- Ghost-note response:
-- Hotspot:
-- Lateral stability:
-- Durability observations:
-- Result: PASS / MODIFY / REJECT
+### Initial physical test
+Setup:
+- Pad: 12-inch PD-128 BC
+- Mesh head: original two-ply Roland mesh
+- Module: Roland TD-9
+- Top interface: self-adhesive furniture felt
+- Module trigger settings: not yet recorded
+- Test duration: not yet recorded
+
+Observed (subjective user assessment):
+- Excellent sensitivity.
+- Excellent ghost-note response.
+- Hotspot was substantially reduced.
+- Print quality was good.
+
+Not yet recorded:
+- Controlled V29/V30 A/B comparison.
+- Lateral-stability assessment.
+- Print-to-print repeatability.
+- Extended durability or cyclic-hit result.
+
+Status:
+- Initial physical test successful.
+- V30 remains experimental pending repeatability and durability work; it is not the stable baseline.
+
+Photographs: [V30 physical photo log](V30-PHOTO-LOG.md).
 
 ## Planned durability work
 Before a public production release, test repeatability across multiple prints and conduct extended strike testing. Candidate milestones include 10,000 and 20,000 hits, followed by inspection for membrane-root cracking, helix fatigue, permanent set, top deformation, and response drift.

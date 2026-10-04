@@ -2,6 +2,8 @@
 
 This document records the engineering path that led to the current TriFlex triple-helix mesh trigger cone. It preserves successful dimensions, failed approaches, physical observations, corrections, and the development discipline used to reach the current design.
 
+Sections describing work before V26 are retrospective development notes. Where no dated artifact or formal test record exists in the repository, they should not be interpreted as instrumented laboratory data.
+
 ## 1. Development objective
 
 The project began with a practical target: replace the conventional foam cone used between a mesh drum head and a piezo sensor with a 3D-printable TPU structure that is sensitive enough for ghost notes, mechanically stable under the mesh head, compliant vertically, resistant to excessive lateral wobble, capable of allowing the piezo to flex rather than simply compressing it, reproducible with FDM printing, and less prone to a strong center hotspot.
@@ -10,7 +12,7 @@ The reference envelope evolved around a roughly Ø38 mm base and an installed he
 
 The current sensor architecture uses an approximately Ø27–28 mm piezo. A small centered adhesive pad supports the metal side of the piezo against the drum plate. TriFlex contacts the ceramic side. The underside remains center-open so the piezo can flex under annular/peripheral loading.
 
-This center-open load path is intentionally preserved because physical testing has shown very high sensitivity. The exact strain distribution has not yet been instrumented, so the explanation remains an engineering hypothesis rather than a measured result.
+Prototypes using this center-open load path have shown very high sensitivity in physical testing. The load path is therefore intentionally preserved, but its causal contribution and exact strain distribution have not yet been instrumented; the explanation remains an engineering hypothesis rather than a measured result.
 
 ## 2. Development strategy
 
@@ -26,7 +28,7 @@ Current rules:
 6. Keep the center-open piezo load path unless a dedicated experiment is intended to test it.
 7. Treat the compliant top interface as part of the mechanical system.
 8. Validate generated files for dimensions, mesh integrity and slicing before printing.
-9. A new revision becomes stable only after physical testing.
+9. A new revision becomes stable only after completing the required physical test scope; an initial successful test alone does not make it stable.
 
 This discipline was adopted after early prototypes changed too many geometric variables at once, making it difficult to identify the cause of improvements.
 
@@ -202,7 +204,7 @@ It must not be silently boolean-unioned, remeshed, normalized or "repaired." A c
 
 > Reproducibility of a physically validated artifact takes priority over cosmetic CAD cleanliness.
 
-## 10. V30 — current/latest design revision
+## 10. V30 — physically tested experimental candidate
 
 V30 is the latest design revision.
 
@@ -218,9 +220,27 @@ For a simplified bending member, stiffness has a strong diameter dependence. A s
 
 TriFlex is not a simple straight beam, so this is not a prediction of 22% lower complete-cone stiffness. It is only a design-direction estimate.
 
-V30 is the **current/latest revision**, but remains **experimental until physically printed and tested**.
+V30 has been physically printed and completed an initial successful functional test.
 
-The next meaningful comparison is V29 vs V30 with the same printer, RhinoLab TPU 95A HS, slicing conditions, pad, module settings and 3 mm felt interface.
+### Initial physical test
+
+Setup:
+- 12-inch PD-128 BC pad,
+- original two-ply Roland mesh head,
+- Roland TD-9 module,
+- self-adhesive furniture-felt top interface.
+
+Subjective observations:
+- excellent sensitivity,
+- excellent ghost-note response,
+- substantially reduced hotspot,
+- good print quality.
+
+Module trigger settings and test duration were not recorded. Controlled V29/V30 A/B comparison, print-to-print repeatability, and extended durability also remain outstanding. V30 is therefore a **physically tested experimental candidate**, not the stable baseline.
+
+![Physically printed V30 installed in a PD-128 BC](../assets/v30/v30-pd-128bc-detail.jpg)
+
+Additional physical installations in a KD-85 kick pad and a custom DIY pad are documented photographically without separate performance claims. See the [complete V30 physical photo log](V30-PHOTO-LOG.md).
 
 ## 11. Material development
 
@@ -243,7 +263,7 @@ TPU moisture became a major manufacturing variable.
 
 Earlier prints showed heavy stringing and occasional weak features. After drying the RhinoLab TPU at approximately 70°C for around 8 hours, stringing tower performance became nearly clean.
 
-Stringing returned after the spool spent time exposed to ambient air, confirming that filament conditioning materially affects print quality.
+Stringing returned after the spool spent time exposed to ambient air. This observation is consistent with filament conditioning materially affecting print quality, but ambient moisture uptake was not instrumented.
 
 Current manufacturing practice:
 - dry TPU before critical prints,
@@ -319,17 +339,17 @@ A flexible neck directly below the top contact was also rejected because excessi
 
 H32 / base Ø38 / top Ø9 / helix Ø3.3 / membrane 1.30 / membrane roots connected / center-open / 3 mm compliant-top allowance.
 
-V29 is the best physically tested revision so far and remains the stable control.
+V29 remains the preserved stable control.
 
-### Latest experimental revision — V30
+### Physically tested experimental candidate — V30
 
 Same target system as V29, with helix diameter reduced from Ø3.3 to Ø3.1 mm.
 
-V30 is the latest design revision. It must not be described as physically validated until the print test is completed.
+V30 has been physically printed and completed an initial successful functional test. It must not be described as stable or production-ready until controlled comparison, repeatability, and durability work is recorded.
 
 ## 18. Next development step
 
-The next test should keep all practical variables fixed and compare V29 against V30.
+The next controlled test should keep all practical variables fixed and compare V29 against V30.
 
 Record at minimum:
 - material and drying state,
@@ -345,10 +365,10 @@ Record at minimum:
 - visible deformation,
 - print defects.
 
-If V30 improves compliance without materially worsening hotspot, lateral stability or triggering consistency, it becomes a candidate for promotion. If not, V29 remains the stable reference and V30 remains experimental.
+V30 can be considered for promotion only if controlled comparison and repeated prints support the initial positive result without materially worsening hotspot, lateral stability, or triggering consistency. Until then, V29 remains the stable reference and V30 remains experimental.
 
 Longer-term validation should include multiple prints and cyclic strike testing (initial milestones: 10,000 and 20,000 hits), followed by inspection for helix fatigue, membrane-root cracking, permanent set, height loss and response drift.
 
 ---
 
-**Revision note:** This report documents the development path through V30. It deliberately distinguishes measured/observed results from engineering hypotheses and preserves V29 as the physically validated control while identifying V30 as the latest experimental design.
+**Revision note:** This report documents the development path through V30. It deliberately distinguishes measured/observed results from engineering hypotheses, preserves V29 as the stable control, and records V30 as a physically tested experimental candidate with repeatability and durability work still pending.

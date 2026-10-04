@@ -6,7 +6,7 @@ alwaysApply: true
 Read AGENTS.md before modifying TriFlex geometry, documentation, or release files.
 
 V29 is the stable physically tested baseline. Never overwrite or silently modify it.
-V30 is experimental and must not be described as physically validated until a test is recorded.
+V30 is a physically tested experimental candidate. Its initial physical test is recorded in docs/TESTING.md, but repeatability and durability remain outstanding. Do not describe V30 as stable or production-ready until the required evidence is recorded.
 
 For mechanical experiments, change one variable at a time whenever practical. Preserve dimensions and load-path features not explicitly named by the experiment.
 

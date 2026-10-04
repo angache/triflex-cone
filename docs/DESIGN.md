@@ -32,12 +32,14 @@ V29 changed the body to 32 mm with a 3 mm compliant-tip allowance, used a 1.30 m
 
 Because multiple parameters changed between earlier prototypes and V29, the hotspot improvement must not be attributed to membrane thickness alone.
 
-## Experimental V30
+## Physically tested experimental V30
 V30 keeps the V29 target geometry except for helix arm diameter:
 - V29: 3.3 mm
 - V30: 3.1 mm
 
-The goal is to reduce vertical spring stiffness while retaining the 1.30 mm membranes and lateral stability. V30 is not physically validated yet.
+The goal is to reduce vertical spring stiffness while retaining the 1.30 mm membranes and lateral stability.
+
+V30 has been physically printed and completed an initial successful functional test. Excellent sensitivity and ghost-note response, substantially reduced hotspot, and good print quality were observed in a 12-inch test pad. These are subjective initial observations; controlled V29/V30 comparison, repeatability, and durability testing remain outstanding. V30 therefore remains experimental, while V29 remains the stable control.
 
 ## Trademark note
 TriFlex is an independent project. Compatibility with particular electronic-drum systems may be documented descriptively, but manufacturer names and trademarks are not part of the TriFlex brand.
