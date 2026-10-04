@@ -60,6 +60,7 @@ Reference Cura profile: [`cura/TriFlex_Ender3S1_TPU95A_V29_Validated.curaprofile
 
 ## Documentation
 
+- [Development history — prototype evolution through V30](docs/DEVELOPMENT-HISTORY.md)
 - [Design and geometry](docs/DESIGN.md)
 - [Printing guide](docs/PRINTING.md)
 - [Physical testing log](docs/TESTING.md)
