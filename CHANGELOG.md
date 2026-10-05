@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-05 — V30 promoted to stable
+### Changed
+- V30 promoted to the stable baseline after multiple prints behaved consistently and passed strike testing of up to approximately 10,000 hits.
+- `models/experimental/triflex-v30-experimental.stl` moved to `models/stable/triflex-v30.stl` without modification (SHA-256 `1380294200b95626e5e04df2e983cc174459755fc91b3e286d876464239f929f`).
+- V29 retained unchanged as the previous stable control.
+- README, AGENTS.md, docs/DESIGN.md, docs/TESTING.md and docs/DEVELOPMENT-HISTORY.md updated for the new baseline.
+
 ## Unreleased
 ### Added
 - Initial TriFlex repository structure.
@@ -20,7 +27,5 @@
 - Replaced the custom personal/non-commercial license with the standardized CC BY-NC-SA 4.0 license; copyright holder recorded as Ali Tuna.
 
 ### Stable reference
-- V29: H32 / base Ø38 / top Ø9 / helix Ø3.3 / membrane 1.30 mm / base-connected membranes / center-open underside / 3 mm compliant-tip allowance.
-
-### Experimental
-- V30: V29 baseline with target helix diameter reduced from Ø3.3 to Ø3.1 mm. Initial physical test successful; controlled comparison, repeatability, and durability pending.
+- V30: V29 baseline with helix diameter reduced from Ø3.3 to Ø3.1 mm. Repeatability and ~10,000-hit durability test passed.
+- V29 (previous stable control): H32 / base Ø38 / top Ø9 / helix Ø3.3 / membrane 1.30 mm / base-connected membranes / center-open underside / 3 mm compliant-tip allowance.

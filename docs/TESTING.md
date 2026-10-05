@@ -19,7 +19,7 @@ Observed:
 Conclusion:
 V26 established that the triple-helix/membrane architecture can achieve very high sensitivity, but hotspot control required further development.
 
-## V29 — physical test / current stable baseline
+## V29 — physical test / previous stable baseline (preserved control)
 Geometry:
 - H32
 - base Ø38
@@ -44,7 +44,7 @@ Observed:
 Important:
 Several mechanical variables differ from V26, so the hotspot reduction cannot yet be assigned to one variable.
 
-## V30 — physically tested experimental candidate
+## V30 — current stable baseline
 Geometry:
 - Same as V29
 - helix Ø3.1 instead of Ø3.3
@@ -74,9 +74,9 @@ Not yet recorded:
 - Print-to-print repeatability.
 - Extended durability or cyclic-hit result.
 
-Status:
+Status at the time of the initial test:
 - Initial physical test successful.
-- V30 remains experimental pending repeatability and durability work; it is not the stable baseline.
+- V30 remained experimental pending repeatability and durability work.
 
 Photographs: [V30 physical photo log](V30-PHOTO-LOG.md).
 
@@ -95,5 +95,21 @@ Performance order:
 
 The original combined video is archived outside version control (SHA-256 `c93ed8d2d40ef7bc48ab52c7d52ae94c099c6ef5cd59a30ca403bda171156ca6`).
 
+### Repeatability and durability test — 2026-10-05
+Reported by the maintainer:
+- Repeatability: multiple V30 prints were tested and behaved consistently.
+- Durability: strike testing of up to approximately 10,000 hits.
+- Result: passed.
+
+Not separately recorded:
+- Exact hit count per print, pads and module settings used during the durability run.
+- Itemized post-test inspection (membrane-root cracking, helix fatigue, permanent set, top deformation).
+- Before/after response comparison.
+
+Decision:
+- V30 promoted to the stable baseline.
+- STL moved to `models/stable/triflex-v30.stl`, byte-for-byte identical to the tested file (SHA-256 `1380294200b95626e5e04df2e983cc174459755fc91b3e286d876464239f929f`). Like V29, it contains 5 closed, non-unioned shells; bounding box 38 × 38 × 32 mm.
+- V29 is preserved unchanged as the previous stable control.
+
 ## Planned durability work
-Before a public production release, test repeatability across multiple prints and conduct extended strike testing. Candidate milestones include 10,000 and 20,000 hits, followed by inspection for membrane-root cracking, helix fatigue, permanent set, top deformation, and response drift.
+Extended strike testing beyond 10,000 hits (for example 20,000 hits) with itemized inspection for membrane-root cracking, helix fatigue, permanent set, top deformation, and response drift.

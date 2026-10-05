@@ -16,22 +16,22 @@ The piezo is approximately 27-28 mm in diameter. A small centered adhesive pad s
 
 ## Project status
 
-**Current stable physical baseline: V29**
+**Current stable physical baseline: V30**
 
 - TPU body height: 32 mm
 - Base: Ø38 mm
 - Top contact: Ø9 mm
-- Three helix arms: Ø3.3 mm
+- Three helix arms: Ø3.1 mm
 - Membrane: 1.30 mm
 - Membrane roots connected to base
 - Center-open underside
 - 3 mm allowance for a compliant top interface
 
-V29 has been physically printed and tested and produced excellent sensitivity with a substantial reduction in hotspot compared with the earlier V26 configuration.
+V30 preserves the V29 geometry and reduces only the helix-arm diameter from Ø3.3 mm to Ø3.1 mm. Its initial test in a 12-inch PD-128 BC with an original two-ply mesh head and a TD-9 module showed excellent sensitivity and ghost-note response, substantially reduced hotspot, and good print quality. Multiple V30 prints then behaved consistently and passed strike testing of up to approximately 10,000 hits, after which V30 was promoted to stable. See [docs/TESTING.md](docs/TESTING.md).
 
-**Current experiment: V30**
+**Previous stable control: V29**
 
-V30 preserves the V29 target geometry and reduces only the helix-arm target diameter from Ø3.3 mm to Ø3.1 mm. It has been physically printed and completed an initial successful test in a 12-inch PD-128 BC with an original two-ply mesh head and a TD-9 module. Excellent sensitivity and ghost-note response, substantially reduced hotspot, and good print quality were observed. V30 remains experimental pending repeatability and durability work; V29 remains the stable control.
+V29 (helix Ø3.3 mm) is preserved unchanged as the previous stable reference. It produced excellent sensitivity with a substantial reduction in hotspot compared with the earlier V26 configuration.
 
 ![Physically printed V30 installed in a PD-128 BC](assets/v30/v30-pd-128bc-detail.jpg)
 
@@ -47,14 +47,14 @@ Click the image to watch the PD-128 BC, DIY pad, and KD-85 test with SSD5 and ra
 
 | File | Status |
 |---|---|
-| [`models/stable/triflex-v29.stl`](models/stable/triflex-v29.stl) | Stable — physically printed and tested |
-| [`models/experimental/triflex-v30-experimental.stl`](models/experimental/triflex-v30-experimental.stl) | Physically tested experimental candidate — repeatability and durability pending |
+| [`models/stable/triflex-v30.stl`](models/stable/triflex-v30.stl) | **Stable** — current baseline; repeatability and ~10,000-hit durability test passed |
+| [`models/stable/triflex-v29.stl`](models/stable/triflex-v29.stl) | Previous stable — preserved control |
 
 The STL files contain the 32 mm TPU body only. The 3 mm top allowance is reserved for a separate felt/foam/compliant contact and is not modeled in the STL.
 
 Mesh check (both files): watertight, consistent winding, bounding box 38 × 38 × 32 mm, top contact Ø9.0 mm.
 
-**V29 is preserved byte-for-byte as the canonical stable artifact** (SHA-256 `6ba6824379025cc35e50dc8483c4deec778fa85bb63e8777b1d8f94238a3a9a2`). It contains 5 closed shells/components that are not boolean-unioned. This is intentional: this exact STL was sliced in Cura and physically validated. "Non-unioned" is not permission to repair, union, remesh, or normalize the stable file. A unioned or cleaned-up variant must be a new experimental revision and must be physically retested before it can be called stable.
+**Both stable STLs are preserved byte-for-byte** — V30 SHA-256 `1380294200b95626e5e04df2e983cc174459755fc91b3e286d876464239f929f`, V29 SHA-256 `6ba6824379025cc35e50dc8483c4deec778fa85bb63e8777b1d8f94238a3a9a2`. Each contains 5 closed shells/components that are not boolean-unioned. This is intentional: these exact STLs were printed and physically tested. "Non-unioned" is not permission to repair, union, remesh, or normalize a stable file. A unioned or cleaned-up variant must be a new experimental revision and must be physically retested before it can be called stable.
 
 ## Printing and material summary
 
@@ -80,7 +80,7 @@ Reference Cura profile: [`cura/TriFlex_Ender3S1_TPU95A_V29_Validated.curaprofile
 
 ## Development discipline
 
-TriFlex revisions should normally change one mechanical variable at a time. Generated geometry and engineering hypotheses must be distinguished from physically tested results. V29 remains unchanged as the stable reference while experimental revisions are evaluated.
+TriFlex revisions should normally change one mechanical variable at a time. Generated geometry and engineering hypotheses must be distinguished from physically tested results. V30 remains unchanged as the stable reference while new experimental revisions are evaluated.
 
 ## License
 
@@ -98,4 +98,4 @@ TriFlex is an independent project. Any third-party manufacturer or product names
 
 ## Development state
 
-The repository is under active engineering development. Durability, print-to-print repeatability, and extended strike testing are planned before a public production release.
+The repository is under active engineering development. V30 has passed print-to-print repeatability and strike testing of up to approximately 10,000 hits; longer durability runs with itemized inspection are planned.

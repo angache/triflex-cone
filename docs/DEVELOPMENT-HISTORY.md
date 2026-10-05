@@ -373,4 +373,10 @@ Longer-term validation should include multiple prints and cyclic strike testing 
 
 ---
 
+## 19. Update — V30 promoted to stable (2026-10-05)
+
+Multiple V30 prints behaved consistently and passed strike testing of up to approximately 10,000 hits, as reported by the maintainer. V30 was promoted to the stable baseline and its STL moved, unmodified, to `models/stable/triflex-v30.stl`. The controlled V29/V30 A/B comparison described in section 18 was not recorded before promotion. V29 remains preserved as the previous stable control. Sections 17 and 18 above describe the state before this promotion.
+
+---
+
 **Revision note:** This report documents the development path through V30. It deliberately distinguishes measured/observed results from engineering hypotheses, preserves V29 as the stable control, and records V30 as a physically tested experimental candidate with repeatability and durability work still pending.

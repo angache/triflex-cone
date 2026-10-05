@@ -3,7 +3,7 @@
 ## Purpose
 TriFlex replaces the conventional foam trigger cone used between a mesh drum head and a piezoelectric sensor. Its mechanical structure uses three helical TPU spring arms plus thin stabilizing membranes.
 
-## Current stable geometry — V29
+## Current stable geometry — V30
 | Parameter | Value |
 |---|---:|
 | Body height | 32 mm |
@@ -11,7 +11,7 @@ TriFlex replaces the conventional foam trigger cone used between a mesh drum hea
 | Top contact diameter | 9 mm |
 | Helix arms | 3 |
 | Helix phase | 120° |
-| Helix arm diameter | 3.3 mm |
+| Helix arm diameter | 3.1 mm (V29: 3.3 mm) |
 | Membrane thickness | 1.30 mm |
 | Top compliance allowance | 3 mm |
 | Underside | Center-open |
@@ -32,14 +32,14 @@ V29 changed the body to 32 mm with a 3 mm compliant-tip allowance, used a 1.30 m
 
 Because multiple parameters changed between earlier prototypes and V29, the hotspot improvement must not be attributed to membrane thickness alone.
 
-## Physically tested experimental V30
-V30 keeps the V29 target geometry except for helix arm diameter:
+## V30 — current stable revision
+V30 keeps the V29 geometry except for helix arm diameter:
 - V29: 3.3 mm
 - V30: 3.1 mm
 
 The goal is to reduce vertical spring stiffness while retaining the 1.30 mm membranes and lateral stability.
 
-V30 has been physically printed and completed an initial successful functional test. Excellent sensitivity and ghost-note response, substantially reduced hotspot, and good print quality were observed in a 12-inch test pad. These are subjective initial observations; controlled V29/V30 comparison, repeatability, and durability testing remain outstanding. V30 therefore remains experimental, while V29 remains the stable control.
+V30's initial functional test in a 12-inch pad showed excellent sensitivity and ghost-note response, substantially reduced hotspot, and good print quality. Multiple V30 prints subsequently behaved consistently and passed strike testing of up to approximately 10,000 hits, and V30 was promoted to stable on 2026-10-05. A controlled V29/V30 A/B comparison has not been recorded; V29 is preserved unchanged as the previous stable control.
 
 ## Trademark note
 TriFlex is an independent project. Compatibility with particular electronic-drum systems may be documented descriptively, but manufacturer names and trademarks are not part of the TriFlex brand.
