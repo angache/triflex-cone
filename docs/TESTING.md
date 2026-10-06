@@ -111,5 +111,31 @@ Decision:
 - STL moved to `models/stable/triflex-v30.stl`, byte-for-byte identical to the tested file (SHA-256 `1380294200b95626e5e04df2e983cc174459755fc91b3e286d876464239f929f`). Like V29, it contains 5 closed, non-unioned shells; bounding box 38 × 38 × 32 mm.
 - V29 is preserved unchanged as the previous stable control.
 
+## V31 — generated experimental (not yet printed)
+Change from V30:
+- Surface quality only. The arm sawtooth seam and the stacked-slab membrane staircase of the V30 mesh are replaced by smooth lofts generated from V30's own horizontal sections (`cad/`). Base, cable notch, neck and top disc are taken unchanged from V30.
+- No intended mechanical change.
+
+Geometry check against V30 (`cad/compare_sections.py`, 160 layers at 0.2 mm):
+- Volume: 4076.2 mm³ vs 4073.8 mm³ (+0.06%).
+- Helix layers (z 3.0–29.5): mean section-area change +0.04%, max 0.99%; mean Hausdorff distance 0.086 mm, max 0.244 mm.
+- Base, notch, neck and top layers: identical.
+- Single closed, watertight solid; bounding box 38 × 38 × 32 mm.
+
+Flat-shaded renders of the same crop, V30 left and V31 right:
+
+![V30 vs V31 arm close-up](../assets/v31/v30-v31-arm-closeup.png)
+![V30 vs V31 top close-up](../assets/v31/v30-v31-top-closeup.png)
+
+File: `models/experimental/triflex-v31-experimental.stl` (SHA-256 `eb9c67e8ad07a56f6ba62ad608ad35d782ea5ea77b752520962588f391c975b7`).
+
+Hypothesis:
+Smoother arm and membrane surfaces should print with fewer bumps and a more uniform wall, without changing response. Not yet tested.
+
+Required before any status change:
+- Print with the reference Cura profile and inspect arm and membrane surfaces.
+- A/B against a V30 printed from the same spool and settings: sensitivity, ghost notes, hotspot, lateral stability.
+- If V31 behaves the same as V30, repeatability and durability checks as for V30.
+
 ## Planned durability work
 Extended strike testing beyond 10,000 hits (for example 20,000 hits) with itemized inspection for membrane-root cracking, helix fatigue, permanent set, top deformation, and response drift.

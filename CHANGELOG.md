@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-06 — V31 generated experimental
+### Added
+- `cad/` — parametric source pipeline: `extract_profile.py` (smooth profile from a tested STL), `generate_triflex.py` (lofted arms and membranes, unioned with the reference base, neck and top), `compare_sections.py` (layer-by-layer comparison), pinned `requirements.txt`.
+- `cad/profiles/v31.json` — smooth profile extracted from the stable V30 STL.
+- `models/experimental/triflex-v31-experimental.stl` — V30 geometry with smooth arm and membrane surfaces; single closed solid. Generated, not yet printed (SHA-256 `eb9c67e8ad07a56f6ba62ad608ad35d782ea5ea77b752520962588f391c975b7`).
+- docs/TESTING.md: V31 geometry check and required tests.
+
 ## 2026-10-05 — V30 promoted to stable
 ### Changed
 - V30 promoted to the stable baseline after multiple prints behaved consistently and passed strike testing of up to approximately 10,000 hits.

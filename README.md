@@ -49,10 +49,11 @@ Click the image to watch the PD-128 BC, DIY pad, and KD-85 test with SSD5 and ra
 |---|---|
 | [`models/stable/triflex-v30.stl`](models/stable/triflex-v30.stl) | **Stable** — current baseline; repeatability and ~10,000-hit durability test passed |
 | [`models/stable/triflex-v29.stl`](models/stable/triflex-v29.stl) | Previous stable — preserved control |
+| [`models/experimental/triflex-v31-experimental.stl`](models/experimental/triflex-v31-experimental.stl) | **Generated experimental — not yet printed.** V30 geometry with smooth arm and membrane surfaces, generated from [`cad/`](cad/README.md) |
 
 The STL files contain the 32 mm TPU body only. The 3 mm top allowance is reserved for a separate felt/foam/compliant contact and is not modeled in the STL.
 
-Mesh check (both files): watertight, consistent winding, bounding box 38 × 38 × 32 mm, top contact Ø9.0 mm.
+Mesh check (both stable files): watertight, consistent winding, bounding box 38 × 38 × 32 mm, top contact Ø9.0 mm.
 
 **Both stable STLs are preserved byte-for-byte** — V30 SHA-256 `1380294200b95626e5e04df2e983cc174459755fc91b3e286d876464239f929f`, V29 SHA-256 `6ba6824379025cc35e50dc8483c4deec778fa85bb63e8777b1d8f94238a3a9a2`. Each contains 5 closed shells/components that are not boolean-unioned. This is intentional: these exact STLs were printed and physically tested. "Non-unioned" is not permission to repair, union, remesh, or normalize a stable file. A unioned or cleaned-up variant must be a new experimental revision and must be physically retested before it can be called stable.
 
@@ -74,6 +75,7 @@ Reference Cura profile: [`cura/TriFlex_Ender3S1_TPU95A_V29_Validated.curaprofile
 - [V30 physical photo log](docs/V30-PHOTO-LOG.md)
 - [Design and geometry](docs/DESIGN.md)
 - [Printing guide](docs/PRINTING.md)
+- [CAD source pipeline](cad/README.md)
 - [Physical testing log](docs/TESTING.md)
 - [Engineering instructions](AGENTS.md)
 - [Changelog](CHANGELOG.md)
