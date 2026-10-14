@@ -1,0 +1,17 @@
+# TriFlex variant parameters.
+# For a new variant: copy this file (e.g. v33.toml), change name and values, then run
+#   .venv/bin/python cad/build.py cad/variants/v33.toml
+# Output: cad/profiles/<name>.json and models/experimental/triflex-<name>-experimental.stl
+# Base, root fillets, cable notch, neck and top disc always stay V30 geometry.
+# Change one value per variant (AGENTS.md).
+
+name = "v32"
+base = "v31"          # starting profile in cad/profiles/ (v31 = V30 geometry, smooth surfaces)
+compare_with = "v31"  # revision to compare against; delete this line to skip (saves ~40 s)
+
+[arm]
+diameter_mm = 3.0     # helix arm diameter in the free span. V30/V31: 3.29. Allowed 2.0–4.0
+taper_mm = 2.5        # length over which the arm returns to V30 thickness at root and neck. Allowed 0.5–6.0
+
+[membrane]
+thickness_mm = 1.30   # V30/V31: 1.30 (measured 1.307). Allowed 0.8–2.0

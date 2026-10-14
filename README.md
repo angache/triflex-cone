@@ -49,8 +49,9 @@ Click the image to watch the PD-128 BC, DIY pad, and KD-85 test with SSD5 and ra
 |---|---|
 | [`models/stable/triflex-v30.stl`](models/stable/triflex-v30.stl) | **Stable** — current baseline; repeatability and ~10,000-hit durability test passed |
 | [`models/stable/triflex-v29.stl`](models/stable/triflex-v29.stl) | Previous stable — preserved control |
-| [`models/experimental/triflex-v31-experimental.stl`](models/experimental/triflex-v31-experimental.stl) | **Generated experimental — not yet printed.** V30 geometry with smooth arm and membrane surfaces, generated from [`cad/`](cad/README.md) |
-
+| [`models/experimental/triflex-v31-experimental.stl`](models/experimental/triflex-v31-experimental.stl) | **Generated experimental — printed once (clean surface), not yet functionally tested.** V30 geometry with smooth arm and membrane surfaces, generated from [`cad/`](cad/README.md) |
+| [`models/experimental/triflex-v32-experimental.stl`](models/experimental/triflex-v32-experimental.stl) | **Generated experimental — not yet printed.** V31 with thinner helix arms (Ø3.0 mm instead of Ø3.29 mm) |
+| `models/experimental/triflex-v33/v34-experimental.stl` | **Generated experimental — not yet printed.** As V32 with a longer blend; arms Ø3.0 / Ø2.8 mm |
 The STL files contain the 32 mm TPU body only. The 3 mm top allowance is reserved for a separate felt/foam/compliant contact and is not modeled in the STL.
 
 Mesh check (both stable files): watertight, consistent winding, bounding box 38 × 38 × 32 mm, top contact Ø9.0 mm.

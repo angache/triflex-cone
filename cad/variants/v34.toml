@@ -1,0 +1,10 @@
+name = "v34"
+base = "v31"
+compare_with = "v31"
+
+[arm]
+diameter_mm = 2.8
+taper_mm = 3.0
+
+[membrane]
+thickness_mm = 1.3

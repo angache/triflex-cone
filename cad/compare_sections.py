@@ -3,27 +3,35 @@
 
 Reports the solid volume, the horizontal section difference at every print
 layer, and the share of sharp edges on the arm and membrane surfaces (a proxy
-for the staircase and seam artifacts visible in the slicer preview).
+for the staircase and seam artifacts visible in the slicer preview). With a
+profile, it also measures the arm seam/groove depth directly (arm_waviness).
 
 Usage:
     python cad/compare_sections.py models/stable/triflex-v30.stl \
-        models/experimental/triflex-v31-experimental.stl
+        models/experimental/triflex-v31-experimental.stl [cad/profiles/v31.json]
 """
 
 from __future__ import annotations
 
+import json
 import sys
 
 import manifold3d as mf
 import numpy as np
 import trimesh
+from scipy.spatial import cKDTree
 from shapely.geometry import Polygon
 from shapely.ops import unary_union
+
+from extract_profile import tube_frame
+from generate_triflex import loft, membrane_rings, rotated
 
 LAYER_MM = 0.2
 FIRST_LAYER_MM = 0.1
 HELIX_Z = (3.0, 29.5)
 SHARP_EDGE_DEG = 20.0
+WAVINESS_Z = (5.5, 28.6)
+WAVINESS_STEP_MM = 0.25
 
 
 def load_solid(path: str):
@@ -33,8 +41,12 @@ def load_solid(path: str):
         [mf.Manifold(mf.Mesh(vert_properties=p.vertices.astype(np.float32),
                              tri_verts=p.faces.astype(np.uint32))) for p in parts],
         mf.OpType.Add)
+    return as_trimesh(solid), mesh
+
+
+def as_trimesh(solid: mf.Manifold) -> trimesh.Trimesh:
     out = solid.to_mesh()
-    return trimesh.Trimesh(np.asarray(out.vert_properties)[:, :3], np.asarray(out.tri_verts)), mesh
+    return trimesh.Trimesh(np.asarray(out.vert_properties)[:, :3], np.asarray(out.tri_verts))
 
 
 def section(mesh: trimesh.Trimesh, z: float):
@@ -58,7 +70,44 @@ def sharp_edge_share(mesh: trimesh.Trimesh) -> float:
     return float(np.mean(angles > SHARP_EDGE_DEG))
 
 
-def main(reference_path: str, candidate_path: str):
+def arm_waviness(mesh: trimesh.Trimesh, profile: dict, membranes: cKDTree) -> np.ndarray:
+    """Peak-to-peak deviation of the arm surface from a smooth tube section.
+
+    The arm is cut perpendicular to the profile centerline; the radial
+    deviation from the profile ellipse minus its low orders (offset, tilt,
+    ovality) is the seam/groove pattern. Points near a membrane are ignored.
+    """
+    arm = profile["arm"]
+    z = np.array(arm["z"])
+    radius, theta = np.array(arm["radius"]), np.array(arm["theta"])
+    centers = np.column_stack([radius * np.cos(theta), radius * np.sin(theta), z])
+    tangents = np.gradient(centers, z, axis=0)
+    result = []
+    for height in np.arange(*WAVINESS_Z, WAVINESS_STEP_MM):
+        i = int(np.argmin(np.abs(z - height)))
+        center, (e1, e2) = centers[i], tube_frame(tangents[i])
+        section = mesh.section(plane_origin=center, plane_normal=tangents[i])
+        loop = min(section.discrete, key=lambda p: np.min(np.linalg.norm(p - center, axis=1)))
+        lengths = np.r_[0.0, np.cumsum(np.linalg.norm(np.diff(loop, axis=0), axis=1))]
+        s = np.linspace(0.0, lengths[-1], 720)
+        points = np.column_stack([np.interp(s, lengths, loop[:, k]) for k in range(3)])
+        u, v = (points - center) @ e1, (points - center) @ e2
+        a1, a2 = arm["axis_1"][i], arm["axis_2"][i]
+        phi = np.arctan2(v / a2, u / a1)
+        deviation = np.hypot(u, v) - np.hypot(a1 * np.cos(phi), a2 * np.sin(phi))
+        free = (np.abs(deviation) < 0.3) & (membranes.query(points)[0] > 0.5)
+        if free.sum() < 100:
+            continue
+        phi, deviation = phi[free], deviation[free]
+        low = np.column_stack([np.ones_like(phi), np.cos(phi), np.sin(phi),
+                               np.cos(2 * phi), np.sin(2 * phi)])
+        coefficients, *_ = np.linalg.lstsq(low, deviation, rcond=None)
+        residual = deviation - low @ coefficients
+        result.append(np.ptp(residual))
+    return np.array(result)
+
+
+def main(reference_path: str, candidate_path: str, profile_path: str | None = None):
     reference, reference_raw = load_solid(reference_path)
     candidate, candidate_raw = load_solid(candidate_path)
     print(f"volume mm3: reference {reference.volume:.2f}, candidate {candidate.volume:.2f}")
@@ -83,7 +132,17 @@ def main(reference_path: str, candidate_path: str):
     for name, mesh in (("reference", reference_raw), ("candidate", candidate_raw)):
         print(f"sharp edges (>{SHARP_EDGE_DEG:.0f} deg) on helix surfaces, {name}: "
               f"{100 * sharp_edge_share(mesh):.1f}%")
+    if profile_path:
+        with open(profile_path) as handle:
+            profile = json.load(handle)
+        membrane = loft(membrane_rings(profile))
+        membranes = cKDTree(np.vstack([as_trimesh(rotated(membrane, i)).sample(20000, seed=0)
+                                       for i in range(3)]))
+        for name, mesh in (("reference", reference_raw), ("candidate", candidate_raw)):
+            waviness = arm_waviness(mesh, profile, membranes)
+            print(f"arm surface waviness, {name}: median peak-to-peak {1000 * np.median(waviness):.1f} um, "
+                  f"90th percentile {1000 * np.percentile(waviness, 90):.1f} um")
 
 
 if __name__ == "__main__":
-    main(sys.argv[1], sys.argv[2])
+    main(sys.argv[1], sys.argv[2], sys.argv[3] if len(sys.argv) > 3 else None)
