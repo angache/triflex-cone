@@ -55,6 +55,11 @@ V29 is the previous stable reference and is preserved unchanged as a control. It
 - Printed and pressed on rim-side pad hardware (2026-10-17). Compatibility notes for specific pad models are descriptive only; do not use manufacturer trademarks as the product name.
 - Photos: `assets/miniflex/`.
 
+## Sibling project — TriSense (electronics / MIDI)
+- Separate repository: [trisense](https://github.com/angache/trisense) (piezo → ESP32 ADC → MIDI).
+- Do not fold TriSense firmware into this mechanical repo; cross-link only.
+- TriFlex / MiniFlex remain the mechanical interfaces TriSense can sit under.
+
 ## Piezo architecture
 The piezo is approximately 27-28 mm diameter. A small centered adhesive pad supports the metal side against the drum plate. TriFlex contacts the ceramic side. The current annular/peripheral loading and open center permit piezo flexure and are considered part of the sensitivity mechanism.
 

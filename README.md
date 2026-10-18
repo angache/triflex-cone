@@ -72,6 +72,10 @@ Mesh check (both stable files): watertight, consistent winding, bounding box 38 
 
 Reference Cura profile: [`cura/TriFlex_Ender3S1_TPU95A_V29_Validated.curaprofile`](cura/TriFlex_Ender3S1_TPU95A_V29_Validated.curaprofile), extracted from the validated V29 G-code. [docs/PRINTING.md](docs/PRINTING.md) is the authoritative printing reference.
 
+## Sibling project — TriSense
+
+DIY multi-sensor MIDI triggering (ESP32 + piezos) lives in a separate repo: **[trisense](https://github.com/angache/trisense)**. TriFlex / MiniFlex stay the mechanical spring parts; TriSense is the sensing + firmware layer.
+
 ## Documentation
 
 - [Development history — prototype evolution through V30](docs/DEVELOPMENT-HISTORY.md)
